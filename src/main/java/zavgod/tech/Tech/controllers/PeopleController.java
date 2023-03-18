@@ -11,9 +11,6 @@ import zavgod.tech.Tech.services.PeopleService;
 import zavgod.tech.Tech.utils.PersonErrorResponse;
 import zavgod.tech.Tech.utils.PersonNotFoundException;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
 @RestController
 @RequestMapping("/people")
 public class PeopleController {

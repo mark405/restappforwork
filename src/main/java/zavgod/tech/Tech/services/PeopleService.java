@@ -28,6 +28,11 @@ public class PeopleService {
         return peopleRepository.findById(id).orElseThrow(() -> new PersonNotFoundException("Person with id(" + id + ") not found "));
     }
 
+    @Transactional
+    public void save(Person person) {
+        peopleRepository.save(person);
+    }
+
     public Integer getAgeById(Long id) {
         Person person = findOne(id);
         return person.getAge();
