@@ -31,9 +31,7 @@ public class PeopleController {
     @GetMapping("/{id}")
     public PersonDTO getById(@PathVariable("id") Long id) {
 
-        Person person = peopleService.findOne(id);
-
-        return convertToPersonDTO(person);
+        return convertToPersonDTO(peopleService.findOne(id));
     }
 
     @ExceptionHandler
