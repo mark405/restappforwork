@@ -33,6 +33,11 @@ public class PeopleService {
         peopleRepository.save(person);
     }
 
+    @Transactional
+    public void deleteOne(Long id) {
+        peopleRepository.deleteById(id);
+    }
+
     public Integer getAgeById(Long id) {
         Person person = findOne(id);
         return person.getAge();
