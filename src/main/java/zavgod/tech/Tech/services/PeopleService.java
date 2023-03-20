@@ -5,10 +5,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import zavgod.tech.Tech.models.Person;
 import zavgod.tech.Tech.repositories.PeopleRepository;
-import zavgod.tech.Tech.utils.PersonNotFoundException;
+import zavgod.tech.Tech.exceptions.PersonNotFoundException;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 @Transactional(readOnly = true)
@@ -20,26 +19,14 @@ public class PeopleService {
         this.peopleRepository = peopleRepository;
     }
 
-    public List<Person> findAll() {
-        return peopleRepository.findAll();
-    }
-
     public Person findOne(Long id) {
         return peopleRepository.findById(id).orElseThrow(() -> new PersonNotFoundException("Person with id(" + id + ") not found "));
     }
 
-    @Transactional
-    public void save(Person person) {
-        peopleRepository.save(person);
-    }
-
-    @Transactional
-    public void deleteOne(Long id) {
-        peopleRepository.deleteById(id);
-    }
-
     public Integer getAgeById(Long id) {
-        Person person = findOne(id);
-        return person.getAge();
+        return findOne(id).getAge();
     }
+
+
+
 }

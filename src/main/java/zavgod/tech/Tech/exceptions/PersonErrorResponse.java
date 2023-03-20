@@ -1,12 +1,12 @@
-package zavgod.tech.Tech.utils;
+package zavgod.tech.Tech.exceptions;
 
 public class PersonErrorResponse {
+    private String message;
+    private Long timestamp;
     public PersonErrorResponse(String message, Long timestamp) {
         this.message = message;
         this.timestamp = timestamp;
     }
-
-    private String message;
 
     public String getMessage() {
         return message;
@@ -24,5 +24,4 @@ public class PersonErrorResponse {
         this.timestamp = timestamp;
     }
 
-    private Long timestamp;
 }

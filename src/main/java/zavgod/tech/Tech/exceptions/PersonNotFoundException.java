@@ -1,4 +1,4 @@
-package zavgod.tech.Tech.utils;
+package zavgod.tech.Tech.exceptions;
 
 public class PersonNotFoundException extends RuntimeException{
     public PersonNotFoundException(String message) {

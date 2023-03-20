@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 import zavgod.tech.Tech.DTO.PersonDTO;
 import zavgod.tech.Tech.models.Person;
 import zavgod.tech.Tech.services.PeopleService;
-import zavgod.tech.Tech.utils.PersonErrorResponse;
-import zavgod.tech.Tech.utils.PersonNotFoundException;
+import zavgod.tech.Tech.exceptions.PersonErrorResponse;
+import zavgod.tech.Tech.exceptions.PersonNotFoundException;
 
 @RestController
 @RequestMapping("/people")
@@ -22,11 +22,6 @@ public class PeopleController {
         this.peopleService = peopleService;
         this.modelMapper = modelMapper;
     }
-
-//    @GetMapping()
-//    public List<PersonDTO> getAll() {
-//        return peopleService.findAll().stream().map(this::convertToPersonDTO).collect(Collectors.toList());
-//    }
 
     @GetMapping("/{id}")
     public PersonDTO getById(@PathVariable("id") Long id) {

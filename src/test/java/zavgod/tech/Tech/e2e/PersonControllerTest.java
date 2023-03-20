@@ -7,7 +7,7 @@ import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.test.web.server.LocalServerPort;
 import org.springframework.test.context.ActiveProfiles;
 import zavgod.tech.Tech.DTO.PersonDTO;
-import zavgod.tech.Tech.utils.PersonErrorResponse;
+import zavgod.tech.Tech.exceptions.PersonErrorResponse;
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
