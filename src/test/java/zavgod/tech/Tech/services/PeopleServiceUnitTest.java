@@ -9,7 +9,6 @@ import org.springframework.test.context.ActiveProfiles;
 import zavgod.tech.Tech.models.Person;
 import zavgod.tech.Tech.repositories.PeopleRepository;
 
-import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;

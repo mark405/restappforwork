@@ -7,8 +7,6 @@ import zavgod.tech.Tech.models.Person;
 import zavgod.tech.Tech.repositories.PeopleRepository;
 import zavgod.tech.Tech.exceptions.PersonNotFoundException;
 
-import java.util.List;
-
 @Service
 @Transactional(readOnly = true)
 public class PeopleService {
